@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <script src="js/jquery-3.2.1.js"></script>
+  <script src="js/scripts.js"></script>
+  <title>Ping-Pong</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Ping-Pong</h1>
+    <div class="sidebar">
+      <h3>About Ping-Pong</h3>
+      <h4>Created By:</h4>
+      <h5>Sharon Gray</h5>
+      <h4>GitHub Username/URL:</h4>
+      <h5>smgray92</h5>
+    </div>
+    <h2>Let's play!</h2>
+    <h4>Rules:</h4>
+    <p>Ping Pong will count up to your number from 1 with the following exceptions:</p>
+    <ol>
+      <li>Numbers divisible by 3 become "ping"</li>
+      <li>Numbers divisible by 5 become "pong"</li>
+      <li>Numbers divisible by 3 and 5 become "pingpong"</li>
+    </ol>
+    <form id="enterNumber">
+      <div class="form-group">
+        <label for="number">Enter your number here:</label>
+        <input id="number" type="text">
+      </div>
+      <button type="submit" class="btn">Ping Pong!</button>
+    </form>
+    <div id="list">
+    </div>
+  </div>
+
+</body>
+</html>
