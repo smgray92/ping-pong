@@ -32,7 +32,7 @@ $(document).ready(function() {
     var result = num(number);
     console.log(result);
 
-    
+
     // $(".list").remove();
     result.forEach(function(item) {
       $(".list").append("<li>"+item+"</li>");
