@@ -7,8 +7,6 @@ h4.tan {
 }
 .sidebar {
   background-color: #8FBC8F;
-  /*position: absolute;
-  left:50px;*/
   padding: 15px;
   height: 1000px;
 }
@@ -18,4 +16,9 @@ h4.tan {
 
 .blue {
   color: #1E90FF;
+}
+img {
+  border: solid #006400;
+  width:300px;
+  padding:12px;
 }
