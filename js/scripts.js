@@ -2,25 +2,36 @@ var num = function(number) {
   var arrayNumber = [];
 
   for (var i = 1; i <= number; i++) {
-    arrayNumber.push(i);
+    if ((i % 3 === 0) && (i % 5 === 0)) {
+      arrayNumber.push("pingpong");
+    }
+    else if (i % 3 === 0) {
+      arrayNumber.push("ping");
+    }
+    else if (i % 5 === 0) {
+      arrayNumber.push("pong");
+    }
+    else {
+      arrayNumber.push(i);
+    }
   }
   return arrayNumber;
 
-  var arrayList = [];
-  arrayList.push(arrayNumber);
-  for (var i = 1; i <= number; i++) {
-    $("#list").append("<li>"+i+"</li>");
-  }
-  return arrayList;
+  // var arrayLists = [];
+  // arrayLists.push(arrayNumber);
+
+  // for (var i = 1; i <= number; i++) {
+  //   $(".list").append("<li>"+i+"</li>");
+  // }
+  // return arrayLists;
 }
-
-
-
 
 $(document).ready(function() {
   $("form#enterNumber").submit(function(event) {
+
     event.preventDefault();
-    var arrayList =  [];
+$("#output").hide();
+    var arrayLists = [];
     // var arrayNumber = [];
     // arrayNumber.push();
     // arrayNumber.forEach(function(item){
@@ -29,12 +40,15 @@ $(document).ready(function() {
     var number = $("input#number").val();
     var result = num(number);
     console.log(result);
-    arrayList.push(result);
+    arrayLists.push(result);
 
-    arrayList.forEach(function(list) {
-      $(".list").append("<li>"+list+"</li>");
+
+
+    arrayLists.forEach(function(item) {
+      $(".list").append("<li>"+item+"</li>");
     });
-    // $("#output").text(result);
-    console.log(arrayList);
+    console.log(arrayLists);
+    $("#output").show(result);
+
   });
 });
