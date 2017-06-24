@@ -12,7 +12,7 @@ var num = function(number) {
       arrayNumber.push("pong");
     }
     else {
-      arrayNumber.push(i);
+      arrayNumber.push(i)
     }
   }
   return arrayNumber;
@@ -20,20 +20,13 @@ var num = function(number) {
 
 
 $(document).ready(function() {
-  $("form#enterNumber").submit(function(event) {
-
-    event.preventDefault();
+  $("#button").click(function() {
     $("#output").hide();
-
-
+    $(".list").empty();
     var number = $("input#number").val();
-
-
     var result = num(number);
     console.log(result);
 
-
-    // $(".list").remove();
     result.forEach(function(item) {
       $(".list").append("<li>"+item+"</li>");
     });
