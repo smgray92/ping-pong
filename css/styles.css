@@ -22,3 +22,6 @@ img {
   width:300px;
   padding:12px;
 }
+#output {
+  display: none;
+}
